@@ -11,6 +11,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in @user #8.29追加　ユーザー登録後ログイン　
+      #↑ /sample_app/app/helpers/sessions_helper.rbのメソッド
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else

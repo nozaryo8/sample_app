@@ -1,1 +1,7 @@
 #今のところは使わないので既存のコードは削除
+#8.23で記入
+#/sample_app/test/integration/users_login_test.rbでテスト用のユーザーとして使う
+michael:
+  name: Michael Example
+  email: michael@example.com
+  password_digest: <%= User.digest('password') %>
